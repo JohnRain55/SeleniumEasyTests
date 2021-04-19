@@ -1,8 +1,7 @@
 from pages.locators import SimpleFormPageLocators
-
 from pages.base_page import BasePage
-from random import choice, randint
-from string import ascii_letters
+from pages.base_page import random_string
+from pages.base_page import random_num
 
 
 class SimpleFormPage(BasePage):
@@ -39,7 +38,7 @@ class SimpleFormPage(BasePage):
 
     def quest_one(self):
         input_1 = self.browser.find_element(*SimpleFormPageLocators.ENTER_MESSAGE)
-        input_text = ''.join(choice(ascii_letters) for i in range(randint(1, 100)))
+        input_text = random_string()
         input_1.send_keys(input_text)
         button = self.browser.find_element(*SimpleFormPageLocators.SHOW_MESSAGE_BUTTON)
         button.click()
@@ -48,10 +47,10 @@ class SimpleFormPage(BasePage):
 
     def quest_too(self):
         num_one = self.browser.find_element(*SimpleFormPageLocators.NUM_ONE)
-        one = randint(0, 10000)
+        one = random_num()
         num_one.send_keys(one)
         num_too = self.browser.find_element(*SimpleFormPageLocators.NUM_TOO)
-        too = randint(0, 10000)
+        too = random_num()
         num_too.send_keys(too)
         button = self.browser.find_element(*SimpleFormPageLocators.SUM_BUTTON)
         button.click()

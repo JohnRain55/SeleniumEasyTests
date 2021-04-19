@@ -20,3 +20,10 @@ def test_quest_too(browser):
     page = SimpleFormPage(browser, link)
     page.open()
     page.quest_too()
+
+
+def test_all_page_quests(browser):
+    page = SimpleFormPage(browser, link)
+    page.open()
+    page.quest_one()
+    page.quest_too()
