@@ -19,6 +19,3 @@ class BasePage:
         self.browser.get(self.url)
         close = self.browser.find_element(*BaseLocators.EXIT_ALERT)
         close.click()
-
-
-

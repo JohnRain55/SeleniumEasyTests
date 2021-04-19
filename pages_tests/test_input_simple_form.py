@@ -14,3 +14,9 @@ def test_quest_one(browser):
     page = SimpleFormPage(browser, link)
     page.open()
     page.quest_one()
+
+
+def test_quest_too(browser):
+    page = SimpleFormPage(browser, link)
+    page.open()
+    page.quest_too()
