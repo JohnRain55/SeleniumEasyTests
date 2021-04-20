@@ -30,3 +30,20 @@ class RadioButtonsPage(BasePage):
     def should_text_be_undisplayed(self):
         assert not self.is_element_displayed(*RadioButtonPageLocators.CHECKING_TEXT), \
             "Checking text is displayed, but should not"
+
+    def quest_one(self):
+        button_check = self.browser.find_element(*RadioButtonPageLocators.BUTTON_CHECK_MALE_OR_FEMALE)
+        button_check.click()
+        assert "Radio button is Not checked" == \
+               self.browser.find_element(*RadioButtonPageLocators.CHECKING_TEXT).text, "Verification text wrong"
+        rb_male = self.browser.find_element(*RadioButtonPageLocators.RADIO_BUTTON_MALE)
+        rb_male.click()
+        button_check.click()
+        assert "Radio button 'Male' is checked" == \
+               self.browser.find_element(*RadioButtonPageLocators.CHECKING_TEXT).text, "Verification text wrong"
+        rb_female = self.browser.find_element(*RadioButtonPageLocators.RADIO_BUTTON_FEMALE)
+        rb_female.click()
+        button_check.click()
+        assert "Radio button 'Female' is checked" == \
+               self.browser.find_element(*RadioButtonPageLocators.CHECKING_TEXT).text, "Verification text wrong"
+
