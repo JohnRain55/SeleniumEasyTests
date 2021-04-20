@@ -27,3 +27,13 @@ class RadioButtonPageLocators:
     RADIO_BUTTON_FEMALE = (By.CSS_SELECTOR, "[name=\"optradio\"][value=\"Female\"]")
     BUTTON_CHECK_MALE_OR_FEMALE = (By.CSS_SELECTOR, "#buttoncheck")
     CHECKING_TEXT = (By.CSS_SELECTOR, "[class=\"radiobutton\"]")
+    RADIO_SEX_MALE = (By.CSS_SELECTOR, "[name=\"gender\"][value=\"Male\"]")
+    RADIO_SEX_FEMALE = (By.CSS_SELECTOR, "[name=\"gender\"][value=\"Female\"]")
+    RADIO_AGE_GROUP_0_5 = (By.CSS_SELECTOR, "[name=\"ageGroup\"][value=\"0 - 5\"]")
+    RADIO_AGE_GROUP_5_15 = (By.CSS_SELECTOR, "[name=\"ageGroup\"][value=\"5 - 15\"]")
+    RADIO_AGE_GROUP_15_50 = (By.CSS_SELECTOR, "[name=\"ageGroup\"][value=\"15 - 50\"]")
+    BUTTON_GET_VALUES = (By.CSS_SELECTOR, "[onclick=\"getValues();\"]")
+    SEX_VALUE = (By.CSS_SELECTOR, "[class=\"groupradiobutton\"]")
+    AGE_VALUE = (By.CSS_SELECTOR, "[class=\"groupradiobutton\"] br")
+
+

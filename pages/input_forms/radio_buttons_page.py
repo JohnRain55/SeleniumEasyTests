@@ -1,5 +1,6 @@
 from pages.locators import RadioButtonPageLocators
 from pages.base_page import BasePage
+from random import choice
 
 
 class RadioButtonsPage(BasePage):
@@ -47,3 +48,19 @@ class RadioButtonsPage(BasePage):
         assert "Radio button 'Female' is checked" == \
                self.browser.find_element(*RadioButtonPageLocators.CHECKING_TEXT).text, "Verification text wrong"
 
+    def quest_too(self):
+        rb_male = self.browser.find_element(*RadioButtonPageLocators.RADIO_SEX_MALE)
+        rb_female = self.browser.find_element(*RadioButtonPageLocators.RADIO_SEX_FEMALE)
+        male_or_female = choice([rb_male, rb_female])
+        male_or_female.click()
+        rb_0_5 = self.browser.find_element(*RadioButtonPageLocators.RADIO_AGE_GROUP_0_5)
+        rb_5_15 = self.browser.find_element(*RadioButtonPageLocators.RADIO_AGE_GROUP_5_15)
+        rb_15_50 = self.browser.find_element(*RadioButtonPageLocators.RADIO_AGE_GROUP_15_50)
+        age = choice([rb_0_5, rb_5_15, rb_15_50])
+        age.click()
+        button_value = self.browser.find_element(*RadioButtonPageLocators.BUTTON_GET_VALUES)
+        button_value.click()
+        assert male_or_female.get_attribute("value") \
+               in self.browser.find_element(*RadioButtonPageLocators.SEX_VALUE).text, "Sex shown wrong"
+        assert age.get_attribute("value").replace("to", '-') \
+               in self.browser.find_element(*RadioButtonPageLocators.SEX_VALUE).text, "Age shown wrong"
