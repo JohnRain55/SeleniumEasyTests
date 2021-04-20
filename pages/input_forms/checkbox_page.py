@@ -5,10 +5,21 @@ from pages.base_page import random_num
 
 class CheckboxPage(BasePage):
     def should_be_elements(self):
-        pass
+        self.should_be_first_checkboxes()
+        self.should_be_checkbox_text()
+        self.should_be_check_all_button()
 
-    def should_be_checkboxes(self):
-        pass
+    def should_be_first_checkboxes(self):
+        assert self.is_element_present(*CheckboxPageLocators.CLICK_ON_THIS_CHECKBOX),\
+            "Checkbox one is not present but should"
+
+    def should_be_checkbox_text(self):
+        assert self.is_element_present(*CheckboxPageLocators.CHECKBOX_TEXT), \
+            "Checkbox text is not present but should"
+
+    def should_be_check_all_button(self):
+        assert self.is_element_present(*CheckboxPageLocators.CHECK_ALL_BUTTON), \
+            "Check All button is not present, but should"
 
     def quest_one(self):
         checkbox_one = self.browser.find_element(*CheckboxPageLocators.CLICK_ON_THIS_CHECKBOX)

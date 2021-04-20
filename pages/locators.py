@@ -20,3 +20,10 @@ class CheckboxPageLocators:
     CHECKBOX_TEXT = (By.CSS_SELECTOR, "div#txtAge")
     CHECKBOXES = (By.CSS_SELECTOR, "input[type=\"checkbox\"]")
     CHECK_ALL_BUTTON = (By.CSS_SELECTOR, "#check1")
+
+
+class RadioButtonPageLocators:
+    RADIO_BUTTON_MALE = (By.CSS_SELECTOR, "[name=\"optradio\"][value=\"Male\"]")
+    RADIO_BUTTON_FEMALE = (By.CSS_SELECTOR, "[name=\"optradio\"][value=\"Female\"]")
+    BUTTON_CHECK_MALE_OR_FEMALE = (By.CSS_SELECTOR, "#buttoncheck")
+    CHECKING_TEXT = (By.CSS_SELECTOR, "[class=\"radiobutton\"]")

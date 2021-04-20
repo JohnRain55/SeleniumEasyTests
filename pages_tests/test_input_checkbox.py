@@ -5,6 +5,12 @@ from pages.input_forms.checkbox_page import CheckboxPage
 link = "https://www.seleniumeasy.com/test/basic-checkbox-demo.html"
 
 
+def test_should_be_elements(browser):
+    page = CheckboxPage(browser, link)
+    page.open()
+    page.should_be_elements()
+
+
 def test_quest_one(browser):
     page = CheckboxPage(browser, link)
     page.open()
