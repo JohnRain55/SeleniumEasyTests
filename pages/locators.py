@@ -39,12 +39,8 @@ class RadioButtonPageLocators:
 
 class DropDownListLocators:
     SELECT_DAY = (By.CSS_SELECTOR, "select#select-demo")
-    WEEK_DAT = (By.CSS_SELECTOR, "select#select-demo > option:nth-child(2)")
     DAY_SELECTED_TEXT = (By.CSS_SELECTOR, "[class=\"selected-value\"]")
     SELECT_CITY = (By.CSS_SELECTOR, "select#multi-select")
     FIRST_SELECTED_CITY_BUTTON = (By.CSS_SELECTOR, "button#printMe")
     ALL_SELECTED_CITY_BUTTON = (By.CSS_SELECTOR, "button#printAll")
     CITY_SELECTED_TEXT = (By.CSS_SELECTOR, "[class=\"getall-selected\"]")
-
-
-

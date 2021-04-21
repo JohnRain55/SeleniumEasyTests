@@ -17,16 +17,24 @@ def test_quest_one(browser):
     page.quest_one()
 
 
-@pytest.mark.xfail(reason="Bug, button 'Get All Selected' shou only first selected item")
-def test_quest_two(browser):
+@pytest.mark.xfail(reason="Bug, button 'Get First Selected' show last selected item")
+def test_quest_two_first_select_button(browser):
     page = DropDownListPage(browser, link)
     page.open()
-    page.quest_two()
+    page.quest_two_first_select_button()
 
 
-@pytest.mark.xfail(reason="Bug, button 'Get All Selected' shou only first selected item")
+@pytest.mark.xfail(reason="Bug, button 'Get All Selected' show last selected item")
+def test_quest_two_all_select_button(browser):
+    page = DropDownListPage(browser, link)
+    page.open()
+    page.quest_two_all_select_button()
+
+
+@pytest.mark.xfail(reason="Bug, button 'Get All Selected' show only first selected item")
 def test_quest_one_and_two(browser):
     page = DropDownListPage(browser, link)
     page.open()
     page.quest_one()
-    page.quest_two()
+    page.quest_two_first_select_button()
+    page.quest_two_all_select_button()
