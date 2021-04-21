@@ -24,7 +24,7 @@ def test_quest_too(browser):
 
 
 @pytest.mark.xfail(reason="Bug, if checkbox one is selected, button 'Check All' does not work correctly ")
-def test_quest_one_and_too(browser):
+def test_quest_one_and_two(browser):
     page = CheckboxPage(browser, link)
     page.open()
     page.quest_one()
