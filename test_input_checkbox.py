@@ -1,5 +1,5 @@
 import pytest
-from pages.input_forms.checkbox_page import CheckboxPage
+from .pages.input_forms.checkbox_page import CheckboxPage
 
 
 link = "https://www.seleniumeasy.com/test/basic-checkbox-demo.html"

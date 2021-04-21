@@ -1,4 +1,4 @@
-from pages.input_forms.simple_form_page import SimpleFormPage
+from .pages.input_forms.simple_form_page import SimpleFormPage
 
 
 link = "https://www.seleniumeasy.com/test/basic-first-form-demo.html"

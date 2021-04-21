@@ -1,7 +1,7 @@
-from pages.locators import SimpleFormPageLocators
-from pages.base_page import BasePage
-from pages.base_page import random_string
-from pages.base_page import random_num
+from ..locators import SimpleFormPageLocators
+from ..base_page import BasePage
+from ..base_page import random_string
+from ..base_page import random_num
 
 
 class SimpleFormPage(BasePage):

@@ -1,5 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
-from pages.locators import BaseLocators
+from .locators import BaseLocators
 from random import choice, randint
 from string import ascii_letters
 

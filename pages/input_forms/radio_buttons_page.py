@@ -1,5 +1,5 @@
-from pages.locators import RadioButtonPageLocators
-from pages.base_page import BasePage
+from ..locators import RadioButtonPageLocators
+from ..base_page import BasePage
 from random import choice
 
 

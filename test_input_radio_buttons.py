@@ -1,4 +1,4 @@
-from pages.input_forms.radio_buttons_page import RadioButtonsPage
+from .pages.input_forms.radio_buttons_page import RadioButtonsPage
 
 
 link = "https://www.seleniumeasy.com/test/basic-radiobutton-demo.html"

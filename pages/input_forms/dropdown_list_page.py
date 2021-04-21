@@ -1,5 +1,5 @@
-from pages.locators import DropDownListLocators
-from pages.base_page import BasePage
+from ..locators import DropDownListLocators
+from ..base_page import BasePage
 from selenium.webdriver.support.select import Select
 from random import choice
 
