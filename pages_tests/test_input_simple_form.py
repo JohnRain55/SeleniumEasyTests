@@ -19,11 +19,11 @@ def test_quest_one(browser):
 def test_quest_too(browser):
     page = SimpleFormPage(browser, link)
     page.open()
-    page.quest_too()
+    page.quest_two()
 
 
 def test_all_page_quests(browser):
     page = SimpleFormPage(browser, link)
     page.open()
     page.quest_one()
-    page.quest_too()
+    page.quest_two()

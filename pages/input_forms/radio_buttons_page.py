@@ -93,7 +93,7 @@ class RadioButtonsPage(BasePage):
         assert "Radio button 'Female' is checked" == \
                self.browser.find_element(*RadioButtonPageLocators.CHECKING_TEXT).text, "Verification text wrong"
 
-    def quest_too(self):
+    def quest_two(self):
         rb_male = self.browser.find_element(*RadioButtonPageLocators.RADIO_SEX_MALE)
         rb_female = self.browser.find_element(*RadioButtonPageLocators.RADIO_SEX_FEMALE)
         male_or_female = choice([rb_male, rb_female])

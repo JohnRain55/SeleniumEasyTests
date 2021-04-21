@@ -19,4 +19,4 @@ def test_quest_one(browser):
 def test_quest_too(browser):
     page = RadioButtonsPage(browser, link)
     page.open()
-    page.quest_too()
+    page.quest_two()
