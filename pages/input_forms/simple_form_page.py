@@ -45,7 +45,7 @@ class SimpleFormPage(BasePage):
         text = self.browser.find_element(*SimpleFormPageLocators.TEXT_MESSAGE).text
         assert input_text == text, "Input text differs from displayed text"
 
-    def quest_too(self):
+    def quest_two(self):
         num_one = self.browser.find_element(*SimpleFormPageLocators.NUM_ONE)
         one = random_num()
         num_one.send_keys(one)

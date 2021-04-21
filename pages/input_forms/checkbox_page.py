@@ -27,7 +27,7 @@ class CheckboxPage(BasePage):
         checkbox_one.click()
         assert self.is_element_displayed(*CheckboxPageLocators.CHECKBOX_TEXT), "Text is not displayed, but should"
 
-    def quest_too(self):
+    def quest_two(self):
         checkboxes = self.browser.find_elements(*CheckboxPageLocators.CHECKBOXES)
         for checkbox in checkboxes[1:]:
             assert "Check All" in \

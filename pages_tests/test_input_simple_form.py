@@ -1,4 +1,4 @@
-from pages.input_forms.simple_form import SimpleFormPage
+from pages.input_forms.simple_form_page import SimpleFormPage
 
 
 link = "https://www.seleniumeasy.com/test/basic-first-form-demo.html"
@@ -19,11 +19,11 @@ def test_quest_one(browser):
 def test_quest_too(browser):
     page = SimpleFormPage(browser, link)
     page.open()
-    page.quest_too()
+    page.quest_two()
 
 
 def test_all_page_quests(browser):
     page = SimpleFormPage(browser, link)
     page.open()
     page.quest_one()
-    page.quest_too()
+    page.quest_two()
