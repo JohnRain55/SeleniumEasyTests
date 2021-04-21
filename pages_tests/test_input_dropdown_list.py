@@ -31,7 +31,7 @@ def test_quest_two_all_select_button(browser):
     page.quest_two_all_select_button()
 
 
-@pytest.mark.xfail(reason="Bug, button 'Get All Selected' show only first selected item")
+@pytest.mark.xfail(reason="Bug, fix bugs with quest two")
 def test_quest_one_and_two(browser):
     page = DropDownListPage(browser, link)
     page.open()

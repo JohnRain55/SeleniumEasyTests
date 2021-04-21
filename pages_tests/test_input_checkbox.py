@@ -11,6 +11,12 @@ def test_should_be_elements(browser):
     page.should_be_elements()
 
 
+def test_check_check_button(browser):
+    page = CheckboxPage(browser, link)
+    page.open()
+    page.check_check_button()
+
+
 def test_quest_one(browser):
     page = CheckboxPage(browser, link)
     page.open()
@@ -29,9 +35,3 @@ def test_quest_one_and_two(browser):
     page.open()
     page.quest_one()
     page.quest_two()
-
-
-def test_check_check_button(browser):
-    page = CheckboxPage(browser, link)
-    page.open()
-    page.check_check_button()
