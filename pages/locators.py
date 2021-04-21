@@ -44,3 +44,7 @@ class DropDownListLocators:
     FIRST_SELECTED_CITY_BUTTON = (By.CSS_SELECTOR, "button#printMe")
     ALL_SELECTED_CITY_BUTTON = (By.CSS_SELECTOR, "button#printAll")
     CITY_SELECTED_TEXT = (By.CSS_SELECTOR, "[class=\"getall-selected\"]")
+
+
+class InputFormLocators:
+    pass
