@@ -47,4 +47,19 @@ class DropDownListLocators:
 
 
 class InputFormLocators:
-    pass
+    FIRST_NAME = (By.CSS_SELECTOR, "input[name=\"first_name\"]")
+    TEXT_FIRST_NAME_EMPTY = (By.CSS_SELECTOR, "small[data-bv-for=\"first_name\"][data-bv-validator=\"notEmpty\"]")
+    TEXT_FIRST_NAME_LENGTH = (By.CSS_SELECTOR, "small[data-bv-for=\"first_name\"][data-bv-validator=\"stringLength\"]")
+
+    LAST_NAME = (By.CSS_SELECTOR, "input[name=\"last_name\"]")
+    EMAIL = (By.CSS_SELECTOR, "input[name=\"email\"]")
+    PHONE = (By.CSS_SELECTOR, "input[name=\"phone\"]")
+    ADDRESS = (By.CSS_SELECTOR, "input[name=\"address\"]")
+    CITY = (By.CSS_SELECTOR, "input[name=\"city\"]")
+    STATE = (By.CSS_SELECTOR, "select[name=\"state\"]")
+    ZIP_CODE = (By.CSS_SELECTOR, "input[name=\"zip\"]")
+    WEBSITE = (By.CSS_SELECTOR, "input[name=\"website\"]")
+    HOSTING_YES = (By.CSS_SELECTOR, "input[name=\"hosting\"][value=\"yes\"]")
+    HOSTING_NO = (By.CSS_SELECTOR, "input[name=\"hosting\"][value=\"no\"]")
+    PROJECT_DESCRIPTION = (By.CSS_SELECTOR, "textarea[name=\"comment\"]")
+    SEND_BUTTON = (By.CSS_SELECTOR, "button[class=\"btn btn-default\"]")
