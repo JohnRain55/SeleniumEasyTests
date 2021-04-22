@@ -7,3 +7,9 @@ def test_quest_can_see_first_name_errors(browser):
     page = InputFormPage(browser, link)
     page.open()
     page.quest_can_see_first_name_errors()
+
+
+def test_quest_can_see_last_name_errors(browser):
+    page = InputFormPage(browser, link)
+    page.open()
+    page.quest_can_see_last_name_errors()

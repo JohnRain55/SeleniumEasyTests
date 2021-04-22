@@ -52,6 +52,9 @@ class InputFormLocators:
     TEXT_FIRST_NAME_LENGTH = (By.CSS_SELECTOR, "small[data-bv-for=\"first_name\"][data-bv-validator=\"stringLength\"]")
 
     LAST_NAME = (By.CSS_SELECTOR, "input[name=\"last_name\"]")
+    TEXT_LAST_NAME_EMPTY = (By.CSS_SELECTOR, "small[data-bv-for=\"last_name\"][data-bv-validator=\"notEmpty\"]")
+    TEXT_LAST_NAME_LENGTH =(By.CSS_SELECTOR, "small[data-bv-for=\"last_name\"][data-bv-validator=\"stringLength\"]")
+
     EMAIL = (By.CSS_SELECTOR, "input[name=\"email\"]")
     PHONE = (By.CSS_SELECTOR, "input[name=\"phone\"]")
     ADDRESS = (By.CSS_SELECTOR, "input[name=\"address\"]")
