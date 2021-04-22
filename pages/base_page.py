@@ -12,6 +12,10 @@ def random_num(start=1, stop=1000):
     return randint(start, stop)
 
 
+def random_number(num):
+    return randint(10 ** (num - 1), 10 ** num - 1)
+
+
 class BasePage:
     def __init__(self, browser, url, timeout=5):
         self.browser = browser

@@ -51,14 +51,18 @@ class InputFormLocators:
     TEXT_FIRST_NAME_EMPTY = (By.CSS_SELECTOR, "small[data-bv-for=\"first_name\"][data-bv-validator=\"notEmpty\"]")
     TEXT_FIRST_NAME_LENGTH = (By.CSS_SELECTOR, "small[data-bv-for=\"first_name\"][data-bv-validator=\"stringLength\"]")
     COLOR_FIRST_NAME = (By.CSS_SELECTOR, "[data-bv-icon-for=\"first_name\"]")
-
     LAST_NAME = (By.CSS_SELECTOR, "input[name=\"last_name\"]")
     TEXT_LAST_NAME_EMPTY = (By.CSS_SELECTOR, "small[data-bv-for=\"last_name\"][data-bv-validator=\"notEmpty\"]")
-    TEXT_LAST_NAME_LENGTH =(By.CSS_SELECTOR, "small[data-bv-for=\"last_name\"][data-bv-validator=\"stringLength\"]")
+    TEXT_LAST_NAME_LENGTH = (By.CSS_SELECTOR, "small[data-bv-for=\"last_name\"][data-bv-validator=\"stringLength\"]")
     COLOR_LAST_NAME = (By.CSS_SELECTOR, "[data-bv-icon-for=\"last_name\"]")
 
     EMAIL = (By.CSS_SELECTOR, "input[name=\"email\"]")
+
     PHONE = (By.CSS_SELECTOR, "input[name=\"phone\"]")
+    PHONE_COLOR = (By.CSS_SELECTOR, "[data-bv-icon-for=\"phone\"]")
+    TEXT_SUPPLY_PHONE = (By.CSS_SELECTOR, "[data-bv-validator=\"notEmpty\"][data-bv-for=\"phone\"]")
+    TEXT_VALID_PHONE = (By.CSS_SELECTOR, "[data-bv-validator=\"phone\"][data-bv-for=\"phone\"]")
+
     ADDRESS = (By.CSS_SELECTOR, "input[name=\"address\"]")
     CITY = (By.CSS_SELECTOR, "input[name=\"city\"]")
     STATE = (By.CSS_SELECTOR, "select[name=\"state\"]")
