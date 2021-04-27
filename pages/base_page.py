@@ -1,3 +1,6 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from .locators import BaseLocators
 from random import choice, randint
@@ -34,6 +37,13 @@ class BasePage:
             if self.browser.find_element(how, what).is_displayed():
                 return True
         return False
+
+    def is_element_have_text(self, how, what, text, timeout=5):
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.text_to_be_present_in_element((how, what), text))
+        except TimeoutException:
+            return False
+        return True
 
     def open(self):
         self.browser.get(self.url)
