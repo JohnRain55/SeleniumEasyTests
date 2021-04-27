@@ -1,5 +1,6 @@
 from ..locators import AjaxFormLocators
 from ..base_page import BasePage
+from ..base_page import random_string
 
 
 class AjaxFormPage(BasePage):
@@ -16,16 +17,15 @@ class AjaxFormPage(BasePage):
 
     def should_be_button(self):
         assert self.is_element_present(*AjaxFormLocators.SUBMIT), "Submit button is not present, bu should"
-    #
-    # def should_submit_only_with_name(self):
-    #     name = self.browser.find_element(*AjaxFormLocators.NAME)
-    #     comment = self.browser.find_element(*AjaxFormLocators.COMMENT)
-    #     button = self.browser.find_element(*AjaxFormLocators.SUBMIT)
-    #     submit_text = self.browser.find_element(*AjaxFormLocators.TEXT_SUCCESSFULLY)
-    #     print("button text1:", button.text)
-    #     button.click()
-    #     print("button text2:", button.text)
-    #     name.send_keys("Suka")
-    #     button.click()
-    #     print("submit_text1:", submit_text.text)
-    #     print("submit_text2:", submit_text.text)
+
+    def should_submit_only_with_name(self):
+        comment = self.browser.find_element(*AjaxFormLocators.COMMENT)
+        comment.send_keys(random_string())
+        button = self.browser.find_element(*AjaxFormLocators.SUBMIT)
+        button.click()
+        assert self.is_element_present(*AjaxFormLocators.SUBMIT), "Bottom is not present, but should"
+        name = self.browser.find_element(*AjaxFormLocators.NAME)
+        name.send_keys(random_string())
+        button.click()
+        assert self.is_element_have_text(*AjaxFormLocators.TEXT_SUCCESSFULLY, "Form submited Successfully!"), \
+            "Text 'Form submited Successfully!' is not displayed, but should"

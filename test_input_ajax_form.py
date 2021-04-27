@@ -8,8 +8,8 @@ def test_should_be_elements(browser):
     page.open()
     page.should_be_elements()
 
-#
-# def test_should_submit_only_with_name(browser):
-#     page = AjaxFormPage(browser, link)
-#     page.open()
-#     page.should_submit_only_with_name()
+
+def test_should_submit_only_with_name(browser):
+    page = AjaxFormPage(browser, link)
+    page.open()
+    page.should_submit_only_with_name()
