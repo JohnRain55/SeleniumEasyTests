@@ -79,3 +79,10 @@ class AjaxFormLocators:
     COMMENT = (By.CSS_SELECTOR, "textarea#description")
     SUBMIT = (By.CSS_SELECTOR, "#btn-submit")
     TEXT_SUCCESSFULLY = (By.CSS_SELECTOR, "div#submit-control")
+
+
+class JQuerySelectLocators:
+    SELECT_COUNTRY = (By.CSS_SELECTOR, "#select2-country-container")
+    SELECT_STATE = (By.CSS_SELECTOR, "input[class=\"select2-search__field\"]")
+    SELECT_TERRITORIES = (By.CSS_SELECTOR, "[title=\"American Samoa\"]")       # need change
+    SELECT_FILE = (By.CSS_SELECTOR, "#files")
