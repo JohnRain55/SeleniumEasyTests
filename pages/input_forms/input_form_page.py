@@ -75,6 +75,12 @@ class InputFormPage(BasePage):
             "Text: 'Please supply your phone number' is displayed under phone, but should not"
         phone_num.clear()
         phone_num.send_keys(3)
+        assert phone_color.value_of_css_property("border-color") == "rgb(169, 68, 66)", \
+            "Phone color is not red, but should"
+        assert self.is_element_displayed(*InputFormLocators.TEXT_VALID_PHONE), \
+            "Text: 'Please supply a vaild phone number with area code' is not displayed under phone, but should"
+        assert not self.is_element_displayed(*InputFormLocators.TEXT_SUPPLY_PHONE), \
+            "Text: 'Please supply your phone number' is displayed under phone, but should not"
         phone_num.send_keys(Keys.BACK_SPACE)
         assert not self.is_element_displayed(*InputFormLocators.TEXT_VALID_PHONE), \
             "Text: 'Please supply a vaild phone number with area code' displayed under phone, but should not"
