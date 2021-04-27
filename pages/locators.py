@@ -72,3 +72,10 @@ class InputFormLocators:
     HOSTING_NO = (By.CSS_SELECTOR, "input[name=\"hosting\"][value=\"no\"]")
     PROJECT_DESCRIPTION = (By.CSS_SELECTOR, "textarea[name=\"comment\"]")
     SEND_BUTTON = (By.CSS_SELECTOR, "button[class=\"btn btn-default\"]")
+
+
+class AjaxFormLocators:
+    NAME = (By.CSS_SELECTOR, "input#title")
+    COMMENT = (By.CSS_SELECTOR, "textarea#description")
+    SUBMIT = (By.CSS_SELECTOR, "#btn-submit")
+    TEXT_SUCCESSFULLY = (By.CSS_SELECTOR, "div#submit-control")

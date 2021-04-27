@@ -29,7 +29,7 @@ class BasePage:
             return False
         return True
 
-    def is_element_displayed(self, how, what,):
+    def is_element_displayed(self, how, what):
         if self.is_element_present(how, what):
             if self.browser.find_element(how, what).is_displayed():
                 return True
