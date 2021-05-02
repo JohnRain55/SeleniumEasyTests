@@ -82,7 +82,14 @@ class AjaxFormLocators:
 
 
 class JQuerySelectLocators:
-    SELECT_COUNTRY = (By.CSS_SELECTOR, "#select2-country-container")
+    SELECT_COUNTRY = (By.CSS_SELECTOR, "#country + [class=\"select2 select2-container select2-container--default\"]")
+    sk = (By.CSS_SELECTOR, "select#country")
+    COUNTRY_LIST = (By.CSS_SELECTOR, "#select2-country-results")
+    COUNTRY_NAMES = (By.CSS_SELECTOR, "[role=\"treeitem\"]")
+    COUNTRY_CONTAINER = (By.CSS_SELECTOR, "#select2-country-container")
+
+
+
     SELECT_STATE = (By.CSS_SELECTOR, "input[class=\"select2-search__field\"]")
     SELECT_TERRITORIES = (By.CSS_SELECTOR, "[title=\"American Samoa\"]")       # need change
     SELECT_FILE = (By.CSS_SELECTOR, "#files")
