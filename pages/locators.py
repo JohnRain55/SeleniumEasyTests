@@ -82,8 +82,8 @@ class AjaxFormLocators:
 
 
 class JQuerySelectLocators:
-    SELECT_COUNTRY = (By.CSS_SELECTOR, "#country + [class=\"select2 select2-container select2-container--default\"]")
-    sk = (By.CSS_SELECTOR, "select#country")
+    SELECT_COUNTRY_FORM = (By.CSS_SELECTOR, "#country + [class=\"select2 select2-container select2-container--default\"]")
+    SELECT_COUNTRY = (By.CSS_SELECTOR, "select#country")
     COUNTRY_LIST = (By.CSS_SELECTOR, "#select2-country-results")
     COUNTRY_NAMES = (By.CSS_SELECTOR, "[role=\"treeitem\"]")
     COUNTRY_CONTAINER = (By.CSS_SELECTOR, "#select2-country-container")

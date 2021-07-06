@@ -3,6 +3,7 @@ from ..base_page import BasePage
 from selenium.webdriver.support.select import Select
 import time
 
+
 class JQuerySelectPage(BasePage):
     def should_be_elements(self):
         self.should_be_select_country()
@@ -27,16 +28,10 @@ class JQuerySelectPage(BasePage):
     def select_country_correct(self):
         assert not self.is_element_present(*JQuerySelectLocators.COUNTRY_LIST), \
             "Select Country span present, but should not"
-        select = self.browser.find_element(*JQuerySelectLocators.SELECT_COUNTRY)
-        select.click()
+        select_form = self.browser.find_element(*JQuerySelectLocators.SELECT_COUNTRY_FORM)
+        select_form.click()
         assert self.is_element_present(*JQuerySelectLocators.COUNTRY_LIST), \
             "Select Country span not present, but should "
-        country_list = self.browser.find_elements(*JQuerySelectLocators.COUNTRY_NAMES)
-        for country in country_list:
-            print(country.text)
-            select.click()
-
-        select1 = Select(self.browser.find_element(*JQuerySelectLocators.sk))
-        select1.select_by_index(2)
-
-        time.sleep(5)
+        select_country = Select(self.browser.find_element(*JQuerySelectLocators.SELECT_COUNTRY))
+        select_country.deselect_by_value("Hong Kong")
+        time.sleep(4)
